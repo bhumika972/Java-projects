@@ -1,0 +1,32 @@
+
+import java.util.Scanner;
+public class Main {
+    public static int  multiplyMatrics(){
+        Scanner scanner=new Scanner(System.in);
+        int sum=0;
+        // input Rows
+        System.out.println("please enter rows");
+        int rows=scanner.nextInt();
+        // input columns
+
+        System.out.println("please enter cols");
+        int cols=scanner.nextInt();
+
+        // initialize array
+        int i=0,j=0;
+        int [][] numbers = new int[rows][cols];
+
+        // Input Element
+        System.out.println("please enter  element");
+        for( i=0; i<rows; i++){
+            for( j=0; j<cols; j++){
+                numbers [i] [j]=scanner.nextInt();} }
+        // Sum of 2D ARRAY
+        System.out.println("Sum of 2D Arrays ");
+        for( i=0; i<rows; i++) {
+            for ( j = 0; j < cols; j++) {
+                sum+=numbers[i][j];    }}
+        return sum;
+    }
+        public static void main(String[] args) {
+System.out.println(multiplyMatrics());}}
