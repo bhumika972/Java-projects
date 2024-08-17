@@ -1,0 +1,15 @@
+ import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("HERE IS PERCENTAGE BELOW ");
+        int english=89;
+        int maths=67;
+        int computer=78;
+        int physics=99;
+        double total=400;
+        double obtained=english+maths+computer+physics;
+        double percentage=(obtained/total)*100;
+        System.out.println("The percentage of Subject is  "+ "= "+ percentage);
+    }
+}
