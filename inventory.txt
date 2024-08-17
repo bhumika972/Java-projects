@@ -1,0 +1,48 @@
+public class Inventory {
+   String[] productNames;
+    int[] quantities;
+    int capacity;
+    int size;
+
+    public Inventory(int capacity) {
+        this.capacity = capacity;
+        productNames = new String[capacity];
+        quantities = new int[capacity];
+        size = 0;
+    }
+
+    // Method to add products to the inventory
+    public void addProduct(String productName, int quantity) {
+        if (size < capacity) {
+            productNames[size] = productName;
+            quantities[size] = quantity;
+            size++;
+            System.out.println(quantity + " " + productName + " added to inventory.");
+        } else {
+            System.out.println("Inventory is full. Cannot add more products.");
+        }
+    }
+
+    // Method to check for low inventory
+    public void checkLowInventory(int threshold) {
+        System.out.println("Low inventory:");
+        for (int i = 0; i < size; i++) {
+            if (quantities[i] < threshold) {
+                System.out.println(productNames[i] + ": " + quantities[i]);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Inventory inventory = new Inventory(10); // Capacity of 10
+
+        // Adding some products to the inventory
+        inventory.addProduct("Apple", 100);
+        inventory.addProduct("Banana", 50);
+        inventory.addProduct("Orange", 30);
+        inventory.addProduct("Grapes", 20);
+
+        // Checking for low inventory
+        inventory.checkLowInventory(25);
+    }
+}
