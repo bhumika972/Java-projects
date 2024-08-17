@@ -1,0 +1,22 @@
+
+import java.util.Scanner;
+public class Main {
+    static int name(){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Please enter  size of an array");
+        int size = scanner.nextInt();
+        String[] name = new String[size];
+
+        System.out.println("Please enter String  of an array");
+        // input
+        for (int a = 0; a < size; a++) {
+             name[a] = scanner.next();}
+        System.out.println("String of even number : ");
+        for ( int a = 0; a < size; a++) {
+            if(a%2==0){
+System.out.println(name[a]);}}
+
+          return 0;
+    }
+    public static void main(String[] args) {
+      System.out.println(name());}}
