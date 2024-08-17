@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main {
+    static int secondLargest(){
+        int num1=0;
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Please enter  size of an array");
+        int size = scanner.nextInt();
+        int[] array = new int[size];
+        System.out.println("Please enter element of an array");
+        // input
+        for (int a = 0; a < size; a++) {
+            array[a] = scanner.nextInt();}
+
+        int largest=array[0];
+        num1=largest;
+        for(int a=0;a<size;a++){
+            if (largest<array[a]){
+                largest=array[a];}
+                else if(array[a]>num1){
+                    num1=array[a];
+            }
+    }
+        System.out.println("Second largest number is  ");
+        return num1;}
+
+    public static void main(String[] args) {
+       System.out.println( secondLargest());}}
